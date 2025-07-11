@@ -1,0 +1,14 @@
+<%- include('partials/header') %>
+
+<div class="post-detail">
+    <h2><%= post.title %></h2>
+    <p class="post-content-full"><%= post.content %></p>
+    <div class="post-actions">
+        <a href="/edit/<%= post.id %>" class="button secondary">Edit Post</a>
+        <form action="/delete/<%= post.id %>" method="POST" onsubmit="return confirm('Are you sure you want to delete this post?');">
+            <button type="submit" class="button danger">Delete Post</button>
+        </form>
+    </div>
+</div>
+
+<%- include('partials/footer') %>

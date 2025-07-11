@@ -1,0 +1,22 @@
+<%- include('partials/header') %>
+
+<div class="page-header">
+    <h2>All Posts</h2>
+    <a href="/compose" class="button primary">Create New Post</a>
+</div>
+
+<% if (posts.length === 0) { %>
+    <p class="no-posts-message">No posts yet. Start by creating one!</p>
+<% } else { %>
+    <div class="posts-grid">
+        <% posts.forEach(function(post){ %>
+            <div class="post-card">
+                <h3><%= post.title %></h3>
+                <p><%= post.content.substring(0, 150) %>...</p>
+                <a href="/posts/<%= post.id %>" class="button secondary">Read More</a>
+            </div>
+        <% }); %>
+    </div>
+<% } %>
+
+<%- include('partials/footer') %>
