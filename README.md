@@ -40,7 +40,7 @@ To get this project up and running on your local machine:
 
 Once the server is running, open your web browser and go to:
 
-``m
+``
 http://localhost:3000
 ``
 
